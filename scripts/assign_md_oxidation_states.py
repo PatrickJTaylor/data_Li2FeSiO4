@@ -1,7 +1,7 @@
 import numpy as np
 
-from figure_regeneration.paths import EXTRACTED_DATA
-from figure_regeneration.wannier import assign_wannier_centres
+from result_regeneration.paths import EXTRACTED_DATA
+from result_regeneration.wannier import assign_wannier_centres
 
 prefix = EXTRACTED_DATA / "molecular_dynamics"
 

@@ -5,7 +5,7 @@ from ase.io import read
 from numpy.typing import NDArray
 from pymatgen.core import Molecule
 
-from figure_regeneration.dos import parse_icobi
+from result_regeneration.dos import parse_icobi
 
 
 def assign_wannier_centres(path: str) -> NDArray[np.float64]:

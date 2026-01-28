@@ -3,9 +3,9 @@ import numpy as np
 from pymatgen.core import Structure
 from vasppy.rdf import RadialDistributionFunction
 
-from figure_regeneration.colours import COLOURS
-from figure_regeneration.formatting import set_formatting
-from figure_regeneration.paths import EXTRACTED_DATA, FIGURES
+from result_regeneration.colours import COLOURS
+from result_regeneration.formatting import set_formatting
+from result_regeneration.paths import EXTRACTED_DATA, FIGURES
 
 
 def main() -> None:

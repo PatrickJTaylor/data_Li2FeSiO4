@@ -2,10 +2,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.lines import Line2D
 
-from figure_regeneration.colours import COLOURS
-from figure_regeneration.formatting import set_formatting
-from figure_regeneration.paths import EXTRACTED_DATA, FIGURES
-from figure_regeneration.trajectory import moving_average
+from result_regeneration.colours import COLOURS
+from result_regeneration.formatting import set_formatting
+from result_regeneration.paths import EXTRACTED_DATA, FIGURES
+from result_regeneration.trajectory import moving_average
 
 
 def main() -> None:

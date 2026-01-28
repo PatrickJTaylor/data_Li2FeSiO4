@@ -1,9 +1,9 @@
 import json
 import matplotlib.pyplot as plt
 
-from figure_regeneration.colours import COLOURS
-from figure_regeneration.formatting import set_formatting
-from figure_regeneration.paths import EXTRACTED_DATA, FIGURES
+from result_regeneration.colours import COLOURS
+from result_regeneration.formatting import set_formatting
+from result_regeneration.paths import EXTRACTED_DATA, FIGURES
 
 
 def main() -> None:

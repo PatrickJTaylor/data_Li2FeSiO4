@@ -1,6 +1,6 @@
 import json
 
-from figure_regeneration.paths import EXTRACTED_DATA
+from result_regeneration.paths import EXTRACTED_DATA
 
 
 def main() -> None:
