@@ -1,0 +1,25 @@
+[build-system]
+requires = ["uv_build==0.9.24"]
+build-backend = "uv_build"
+
+[project]
+name = "figure-regeneration"
+version = "0.1.0"
+description = "Reproducibly regenerate the figures from the paper"
+readme = "README.md"
+authors = [
+  {name = "Patrick J. Taylor", email = "pjt35@bath.ac.uk"}
+]
+maintainers = [
+  {name = "Patrick J. Taylor", email = "pjt35@bath.ac.uk"}
+]
+requires-python = "==3.12.*"
+dependencies = [
+    "ase==3.27.0",
+    "matplotlib==3.10.8",
+    "numpy==2.4.1",
+    "pymatgen==2025.10.7",
+    "scipy==1.17.0",
+    "tqdm==4.67.1",
+    "vasppy==0.7.1.0",
+]
