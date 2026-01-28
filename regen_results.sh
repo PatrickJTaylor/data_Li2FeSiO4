@@ -172,5 +172,5 @@ done
 
 printf "\n"
 
-log "Copying regenerated figures from ${CONTAINER_ID} -> ./regenerated_figures"
-silence_until_error docker cp "${CONTAINER_ID}":/work/regenerated_figures .
+log "Copying regenerated figures from ${CONTAINER_ID} -> ./figures/regenerated"
+silence_until_error docker cp "${CONTAINER_ID}":/work/figures/regenerated ./figures
