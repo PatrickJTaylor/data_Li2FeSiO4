@@ -44,11 +44,25 @@ Rather than regenerating everything in one go, it is also possible to select a s
 
 ### Option 2 - uv ⚡
 
-This repository is technically structured as a [uv](https://docs.astral.sh/uv/) project, so in addition to the Docker workflow, it is also possible to directly run any of the analysis code in the following manner:
+This repository is technically structured as a [uv](https://docs.astral.sh/uv/) project, so in addition to the Docker workflow, it is also possible to run any of the analysis code in the following manner:
 
 ```shell
 uv run scripts/figure_6.py
 ```
 
 Running the analysis scripts through `uv` ensures that an appropriate Python environment is used (much like the Docker solution, minus the additional reproducibility afforded by containerisation).
-To install `uv`, see the official [documentation](https://docs.astral.sh/uv/getting-started/installation/).
+To install uv, see the official [documentation](https://docs.astral.sh/uv/getting-started/installation/).
+
+### Option 3 - Other Python environments 🐍
+
+If you do not have Docker or uv installed and would rather stick with the Python tooling you already possess, you can (at the cost of some stability/reproducibility) navigate to the repository root and:
+
+```shell
+pip install -e .
+```
+
+This will effectively install the analysis code and its dependencies into the current Python environment, after which you should be able to run any of the relevant scripts directly:
+
+```shell
+python scripts/figure_S2.py
+```
