@@ -5,13 +5,13 @@ build-backend = "uv_build"
 [project]
 name = "result-regeneration"
 version = "0.1.0"
-description = "Reproducibly regenerate the results from the paper"
+description = "Regenerate the results from the manuscript \"Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li2FeSiO4\""
 readme = "README.md"
 authors = [
-  {name = "Patrick J. Taylor", email = "pjt35@bath.ac.uk"}
+  {name = "Patrick J. Taylor", email = "patrick.joseph.taylor@gmail.com"}
 ]
 maintainers = [
-  {name = "Patrick J. Taylor", email = "pjt35@bath.ac.uk"}
+  {name = "Patrick J. Taylor", email = "patrick.joseph.taylor@gmail.com"}
 ]
 requires-python = "==3.12.*"
 dependencies = [
