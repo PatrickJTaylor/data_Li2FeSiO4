@@ -55,7 +55,7 @@ To install uv, see the official [documentation](https://docs.astral.sh/uv/gettin
 
 ### Option 3 - Other Python environments 🐍
 
-If you do not have Docker or uv installed and would rather stick with the Python tooling you already possess, you can (at the cost of some stability/reproducibility) navigate to the repository root and:
+If you do not have Docker or uv installed and would rather stick with the Python tooling you already possess, you can (at the cost of some stability/reproducibility) navigate to the repository root and attempt to:
 
 ```shell
 pip install -e .
@@ -66,3 +66,6 @@ This will effectively install the analysis code and its dependencies into the cu
 ```shell
 python scripts/figure_S2.py
 ```
+
+It should be noted that due to the strict version pinning in this repository's [pyproject.toml](pyproject.toml), it may be challenging for `pip` to resolve its dependency graph without any conflicts if the environment that you are using already has many other packages installed.
+For this reason, it is advisable to start from a fresh virtual environment if you intend to follow this workflow.
