@@ -55,15 +55,15 @@ cleanup_container() {
 
 print_help() {
   cat << E0F
-Usage: $0 [options] <all | figures | text | main | supp | <result_id> ...>
+Usage: $0 [options] <all | figures | other_results | main | supp | <result_id> ...>
 
-Regenerate the results for the manuscript:
+Regenerate the figures/results for the manuscript:
 "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li2FeSiO4"
 
 Arguments:
-  all                Regenerate all results (all figures + discussed-in-text results)
+  all                Regenerate everything (all figures + discussed-in-text results)
   figures            Regenerate all figures (main text + supplementary material, Fig. 2-S3)
-  text               Regenerate all discussed-in-text results (oxi_states + thermo)
+  other_results      Regenerate all discussed-in-text results (oxi_states + thermo)
   main               Regenerate only figures from the main text (Fig. 2-8)
   supp               Regenerate only figures from the supplementary material (Fig. S1-S3)
   <result_id> ...    Regenerate a specific set of results e.g., fig_2, fig_S1 and thermo
@@ -80,7 +80,7 @@ Possible values for <result_id> are:
     - fig_S2        (convex hull and voltage curve)
     - fig_S3        (absolute magmom distributions)
 
-  Misc (discussed in the text but not directly associated with a figure):
+  Other results (discussed in the text but not directly associated with a figure):
     - oxi_states    (oxidation states at x = 2, 1, 0)
     - thermo        (thermodynamic stability of FeSiO4)
 
@@ -116,7 +116,7 @@ if [[ "$1" == "all" ]]; then
   RESULTS=("${RESULT_IDS[@]}")
 elif [[ "$1" == "figures" ]]; then
   RESULTS=("${FIG_IDS[@]}")
-elif [[ "$1" == "text" ]]; then
+elif [[ "$1" == "other_results" ]]; then
   RESULTS=("${TEXT_IDS[@]}")
 elif [[ "$1" == "main" ]]; then
   RESULTS=("${MAIN_IDS[@]}")
