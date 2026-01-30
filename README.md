@@ -1,37 +1,50 @@
 # Supporting Data for "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li<sub>2</sub>FeSiO<sub>4</sub>"
 
+Authors:
+- Patrick J. Taylor, ORCID: [0009-0003-6511-6442](https://orcid.org/0009-0003-6511-6442)
+- Kit McColl, ORCID: [0000-0002-7794-8276](https://orcid.org/0000-0002-7794-8276)
+- M. Saiful Islam, ORCID: [0000-0002-8077-6241](https://orcid.org/0000-0002-8077-6241)
+- Benjamin J. Morgan, ORCID: [0000-0002-3056-8233](https://orcid.org/0000-0002-3056-8233)
+
 This is the Supporting Data for the manuscript "Multi-Step Oxygen Redox Mechanism in the Polyanionic Cathode Li<sub>2</sub>FeSiO<sub>4</sub>".
+More precisely, this repository contains the [minimal dataset](extracted_data) and accompanying [analysis code](scripts) required to regenerate all of the results and figures in the manuscript.
 
-## Usage
+## Usage 📝
 
-This archive provides two methods by which the figures/results discussed in the manuscript can be regenerated from the underlying data.
+Practically speaking, to reproduce any one result or figure in the manuscript, all that is required is to run the relevant [Python script](scripts).
+Every figure that can be programatically generated has an associated script, which when run will deposit the regenerated pdf in [figures/regenerated](figures/regenerated).
+There are also several scripts that do not regenerate figures, but reproduce other results that are discussed in the text of the manuscript:
+- [assign_delithiation_oxidation_states.py](scripts/assign_delithiation_oxidation_states.py): assign Wannier oxidation states for sequentially delithiated Li<sub>$x$</sub>FeSiO<sub>4</sub> at $x = 2, 1, 0$.
+- [thermodynamic_stability.py](scripts/thermodynamic_stability.py): determine the thermodynamic stability of FeSiO<sub>4</sub>.
 
-### Option 1 (recommended) - Docker
+Whilst one could run the relevant scripts in any old Python environment that has access to the necessary dependencies, this repository provides two convenient methods for building bespoke and version-pinned environments for the sake of maximal reproducibility.
 
-For maximal reproducibility, all figures/results can be regenerated via the `regen_results.sh` script, which uses Docker to run all the relevant Python scripts in a containerised manner.
+### Option 1 (recommended) - Docker 🐋
 
-To regenerate everything in one go:
+All figures and results can be regenerated via the [regen_results.sh](regen_results.sh) script, which uses [Docker](https://www.docker.com/resources/what-container/) to run all of the relevant Python scripts in a containerised manner.
+For guidance on installing Docker, please see the official [documentation](https://docs.docker.com/engine/install/).
+
+To regenerate everything in one go, simply run:
 
 ```shell
 ./regen_results.sh all
 ```
 
-Running the above will build a Docker image, spin up a container, run all the necessary Python and then copy any resulting figures to `./regenerated_figures`.
+Executing the above will build a Docker image, spin up a container, run the full suite of analysis code, display the regenerated results and then copy the resulting figures to `./regenerated_figures`.
 
-For additional options, see the help menu built into the bash script:
+Rather than regenerating everything in one go, it is also possible to select a subset of figures/results to be reproduced - see the help menu for further details:
 
 ```
 ./regen_results.sh --help
 ```
 
-### Option 2 - uv
+### Option 2 - uv ⚡
 
-All of the Python scripts required for result regeneration are located in `./scripts`.
-For example, every figure that can be programmatically regenerated has a corresponding `figure_x.py` script in `./scripts` - there are also other scripts that do not generate figures, but do reproduce other results discussed in the text of the manuscript (e.g., the energy of FeSiO<sub>4</sub> above the hull).
-Technically these scripts can be run with any Python environment that contains the required packages, but for sake of reproducibility, it is better to use `uv`:
+This repository is technically structured as a [uv](https://docs.astral.sh/uv/) project, so in addition to the Docker workflow, it is also possible to directly run any of the analysis code in the following manner:
 
-```
-uv run scripts/figure_2.py
+```shell
+uv run scripts/figure_6.py
 ```
 
-The lockfile that ships with this archive will ensure that the above is executed with a highly reproducible Python environment, which should mitigate the vast majority of possible problems with breaking changes in dependencies etc.
+Running the analysis scripts through `uv` ensures that an appropriate Python environment is used (much like the Docker solution, minus the additional reproducibility afforded by containerisation).
+To install `uv`, see the official [documentation](https://docs.astral.sh/uv/getting-started/installation/).
