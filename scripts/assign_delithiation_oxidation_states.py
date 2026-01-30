@@ -1,4 +1,3 @@
-import numpy as np
 from pymatgen.core import Structure
 
 from result_regeneration.paths import EXTRACTED_DATA
