@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 
 from result_regeneration.colours import COLOURS
+from result_regeneration.errors import DependencyError
 from result_regeneration.formatting import set_formatting
 from result_regeneration.paths import EXTRACTED_DATA, FIGURES
 from result_regeneration.wannier import correct_dimer_oxidation_states
@@ -45,9 +46,13 @@ def main() -> None:
 
     for idx, temperature in enumerate(temperatures):
         for col_idx, frame_idx in enumerate(frame_sets[idx]):
-            oxidation_states = correct_dimer_oxidation_states(
-                prefix / f"{temperature}" / "selected_frames" / f"{frame_idx}"
-            )
+            try:
+                oxidation_states = correct_dimer_oxidation_states(
+                    prefix / f"{temperature}" / "selected_frames" / f"{frame_idx}"
+                )
+
+            except OSError as base_error:
+                raise DependencyError from base_error
 
             fe_oxidation_states = oxidation_states[:36]
             o_oxidation_states = oxidation_states[36:180]

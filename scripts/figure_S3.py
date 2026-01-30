@@ -4,6 +4,7 @@ from matplotlib.patches import Rectangle
 from scipy.stats import gaussian_kde
 
 from result_regeneration.colours import COLOURS
+from result_regeneration.errors import DependencyError
 from result_regeneration.formatting import set_formatting
 from result_regeneration.paths import EXTRACTED_DATA, FIGURES
 
@@ -19,13 +20,18 @@ def main() -> None:
     abs_fe_magmoms = {3: [], 4: [], 5: []}
     for idx, temperature in enumerate(temperatures):
         for frame_idx in frame_sets[idx]:
-            oxidation_states = np.load(
-                prefix
-                / f"{temperature}"
-                / "selected_frames"
-                / f"{frame_idx}"
-                / "oxidation_states.npy"
-            )
+            try:
+                oxidation_states = np.load(
+                    prefix
+                    / f"{temperature}"
+                    / "selected_frames"
+                    / f"{frame_idx}"
+                    / "oxidation_states.npy"
+                )
+
+            except OSError as base_error:
+                raise DependencyError from base_error
+
             magmoms = np.load(
                 prefix
                 / f"{temperature}"
