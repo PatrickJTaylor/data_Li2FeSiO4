@@ -13,9 +13,6 @@ More precisely, this repository contains the [minimal dataset](extracted_data) a
 That being said, the raw data used to produce these figures are present in the dataset included in this archive.
 The geometry of Li<sub>2</sub>FeSiO<sub>4</sub> required to plot figure 1, as well as the `xsf` files necessary to plot the Wannier isosurfaces of Figure 4 can all be found in [extracted_data/sequential_delithiation](extracted_data/sequential_delithiation).
 
-Figure 1 was produced in [VESTA]() based on the [pristine geometry](extracted_data/sequential_delithiation/Li2FeSiO4/POSCAR) of Li<sub>2</sub>FeSiO<sub>4</sub>.
-Figure 4 was produced 
-
 ## Usage 📝
 
 Practically speaking, to reproduce any one result or figure in the manuscript, all that is required is to run the relevant [Python script](scripts).
