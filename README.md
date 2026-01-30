@@ -21,7 +21,7 @@ There are also several scripts that do not regenerate figures, but reproduce oth
 - [assign_delithiation_oxidation_states.py](scripts/assign_delithiation_oxidation_states.py): assign Wannier oxidation states for sequentially delithiated Li<sub>$x$</sub>FeSiO<sub>4</sub> at $x = 2, 1, 0$.
 - [thermodynamic_stability.py](scripts/thermodynamic_stability.py): determine the thermodynamic stability of FeSiO<sub>4</sub>.
 
-Whilst one could run the relevant scripts in any old Python environment that has access to the necessary dependencies, this repository provides two convenient methods for building bespoke and version-pinned environments for the sake of maximal reproducibility.
+Whilst one could technically run the relevant scripts in any old Python environment that has access to the necessary dependencies, this repository provides several convenient methods for building bespoke and version-pinned environments for the sake of maximal reproducibility.
 
 ### Option 1 (recommended) - Docker 🐋
 
