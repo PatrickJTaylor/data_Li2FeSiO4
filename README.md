@@ -1,10 +1,10 @@
 # Supporting Data for "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li<sub>2</sub>FeSiO<sub>4</sub>"
 
 Authors:
-- Patrick J. Taylor &nbsp; &nbsp;ORCID: [0009-0003-6511-6442](https://orcid.org/0009-0003-6511-6442)
-- Kit McColl &nbsp; &nbsp;ORCID: [0000-0002-7794-8276](https://orcid.org/0000-0002-7794-8276)
-- M. Saiful Islam &nbsp; &nbsp;ORCID: [0000-0002-8077-6241](https://orcid.org/0000-0002-8077-6241)
-- Benjamin J. Morgan &nbsp; &nbsp;ORCID: [0000-0002-3056-8233](https://orcid.org/0000-0002-3056-8233)
+- Patrick J. Taylor, ORCID: [0009-0003-6511-6442](https://orcid.org/0009-0003-6511-6442)
+- Kit McColl, ORCID: [0000-0002-7794-8276](https://orcid.org/0000-0002-7794-8276)
+- M. Saiful Islam, ORCID: [0000-0002-8077-6241](https://orcid.org/0000-0002-8077-6241)
+- Benjamin J. Morgan, ORCID: [0000-0002-3056-8233](https://orcid.org/0000-0002-3056-8233)
 
 This is the Supporting Data for the manuscript "Multi-Step Oxygen Redox Mechanism in the Polyanionic Cathode Li<sub>2</sub>FeSiO<sub>4</sub>".
 More precisely, this repository contains the [minimal dataset](extracted_data) and accompanying [analysis code](scripts) required to regenerate all of the results and figures in the manuscript.
