@@ -7,12 +7,19 @@ Authors:
 - Benjamin J. Morgan, ORCID: [0000-0002-3056-8233](https://orcid.org/0000-0002-3056-8233)
 
 This is the Supporting Data for the manuscript "Multi-Step Oxygen Redox Mechanism in the Polyanionic Cathode Li<sub>2</sub>FeSiO<sub>4</sub>".
-More precisely, this repository contains the [minimal dataset](extracted_data) and accompanying [analysis code](scripts) required to regenerate all of the results and figures in the manuscript.
+More precisely, this repository contains the [minimal dataset](extracted_data) and accompanying [analysis code](scripts) required to regenerate all of the results and figures[^1] in the manuscript.
+
+[^1]: Note that figures 1 and 4 were not generated programmatically, so they cannot be reproduced in an automated manner.
+That being said, the raw data used to produce these figures are present in the dataset included in this archive.
+The geometry of Li<sub>2</sub>FeSiO<sub>4</sub> required to plot figure 1, as well as the `xsf` files necessary to plot the Wannier isosurfaces of Figure 4 can all be found in [extracted_data/sequential_delithiation](extracted_data/sequential_delithiation).
+
+Figure 1 was produced in [VESTA]() based on the [pristine geometry](extracted_data/sequential_delithiation/Li2FeSiO4/POSCAR) of Li<sub>2</sub>FeSiO<sub>4</sub>.
+Figure 4 was produced 
 
 ## Usage 📝
 
 Practically speaking, to reproduce any one result or figure in the manuscript, all that is required is to run the relevant [Python script](scripts).
-Every figure that can be programatically generated has an associated script, which when run will deposit the regenerated pdf in [figures/regenerated](figures/regenerated).
+Every figure that can be programmatically generated has an associated script, which when run will deposit the regenerated pdf in [figures/regenerated](figures/regenerated).
 There are also several scripts that do not regenerate figures, but reproduce other results that are discussed in the text of the manuscript:
 - [assign_delithiation_oxidation_states.py](scripts/assign_delithiation_oxidation_states.py): assign Wannier oxidation states for sequentially delithiated Li<sub>$x$</sub>FeSiO<sub>4</sub> at $x = 2, 1, 0$.
 - [thermodynamic_stability.py](scripts/thermodynamic_stability.py): determine the thermodynamic stability of FeSiO<sub>4</sub>.
