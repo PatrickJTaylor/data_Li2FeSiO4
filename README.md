@@ -1,5 +1,8 @@
 # Supporting Data for "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li<sub>2</sub>FeSiO<sub>4</sub>"
 
+[![License: GPL v3](https://img.shields.io/badge/license-GPLv3-blue)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: CC BY 4.0](https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 Authors:
 - Patrick J. Taylor, ORCID: [0009-0003-6511-6442](https://orcid.org/0009-0003-6511-6442)
 - Kit McColl, ORCID: [0000-0002-7794-8276](https://orcid.org/0000-0002-7794-8276)
