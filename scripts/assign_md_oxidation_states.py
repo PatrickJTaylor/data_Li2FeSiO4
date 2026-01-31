@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (C) 2026 Patrick J. Taylor
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 import numpy as np
 
 from result_regeneration.paths import EXTRACTED_DATA

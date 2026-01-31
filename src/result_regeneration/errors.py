@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: Copyright (C) 2026 Patrick J. Taylor
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+
 class DependencyError(Exception):
     """
     A trivial custom exception to explicitly highlight the dependency of certain figure

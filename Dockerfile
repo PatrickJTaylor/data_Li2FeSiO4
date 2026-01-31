@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (C) 2026 Patrick J. Taylor
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 FROM python:3.12-slim
 
 COPY --from=ghcr.io/astral-sh/uv:0.9.25 /uv /usr/local/bin/uv

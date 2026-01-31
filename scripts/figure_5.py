@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (C) 2026 Patrick J. Taylor
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.lines import Line2D
