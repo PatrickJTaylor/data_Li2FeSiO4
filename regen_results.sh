@@ -65,10 +65,10 @@ Regenerate the figures/results for the manuscript:
 
 Arguments:
   all                Regenerate everything (all figures + discussed-in-text results)
-  figures            Regenerate all figures (main text + supplementary material, FIG. 2-S3)
+  figures            Regenerate all figures (main text + supplementary material, Fig. 2-S3)
   other_results      Regenerate all discussed-in-text results (oxi_states + thermo)
-  main               Regenerate only figures from the main text (FIG. 2-8)
-  supp               Regenerate only figures from the supplementary material (FIG. S1-S3)
+  main               Regenerate only figures from the main text (Fig. 2-8)
+  supp               Regenerate only figures from the supplementary material (Fig. S1-S3)
   <result_id> ...    Regenerate a specific set of results e.g., fig_2, fig_S1 and thermo
 
 Possible values for <result_id> are:
@@ -169,7 +169,7 @@ for result_id in "${RESULTS[@]}"; do
     fig_num="${result_id:4}"
 
     docker exec "${CONTAINER_ID}" python "scripts/figure_${fig_num}.py" &
-    spinner "Regenerating FIG. ${fig_num}" "${!}"
+    spinner "Regenerating Fig. ${fig_num}" "${!}"
   fi
 done
 
