@@ -10,6 +10,7 @@ Authors:
 - Benjamin J. Morgan, ORCID: [0000-0002-3056-8233](https://orcid.org/0000-0002-3056-8233)
 
 This is the Supporting Data for the manuscript "Multi-Step Oxygen Redox Mechanism in the Polyanionic Cathode Li<sub>2</sub>FeSiO<sub>4</sub>", DOI: [10.26434/chemrxiv.10001983/v1](https://doi.org/10.26434/chemrxiv.10001983/v1).
+
 More precisely, this repository contains the [minimal dataset](extracted_data) and accompanying [analysis code](scripts) required to regenerate all of the results and figures[^1] in the manuscript.
 
 [^1]: Note that figures 1 and 4 were not generated programmatically, so they cannot be reproduced in an automated manner.
