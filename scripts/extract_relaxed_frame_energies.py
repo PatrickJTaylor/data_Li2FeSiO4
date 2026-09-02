@@ -7,8 +7,14 @@ output, and write them to extracted_data/molecular_dynamics/<T>/relaxed_frame_en
 
 This script documents how the archived energies were obtained. It requires the raw
 dataset (University of Bath Research Data Archive, doi:10.15125/BATH-01647), which is
-not included in this repository. For each frame, the energy is the final-ionic-step
-energy(sigma->0) reported in the relaxation OUTCAR.
+not included in this repository.
+
+Each selected frame was quenched by geometry optimisation (relaxation/), then a static
+calculation was run at the relaxed geometry (lobster/: same cutoff and k-points,
+tetrahedron-method Brillouin-zone integration, any O-O dimer atoms initialised with a
+small negative magnetic moment). The archived energies, magnetic moments, ICOBIs and
+Wannier oxidation states for each frame all come from this static calculation, so the
+energy taken here is its TOTEN (for the tetrahedron method this equals energy(sigma->0)).
 
 Usage:
     python scripts/extract_relaxed_frame_energies.py /path/to/raw/molecular_dynamics
@@ -23,11 +29,11 @@ import numpy as np
 from result_regeneration.paths import EXTRACTED_DATA
 
 FRAME_SETS = {"500K": (0, 6881, 16602, 39366), "1000K": (0, 2581, 8315, 12276)}
-ENERGY_RE = re.compile(r"energy\(sigma->0\)\s*=\s*(-?\d+\.\d+)")
+ENERGY_RE = re.compile(r"free  energy   TOTEN\s*=\s*(-?\d+\.\d+)")
 
 
 def final_energy(outcar: Path) -> float:
-    """Return the energy(sigma->0) of the final ionic step in an OUTCAR."""
+    """Return the final TOTEN in an OUTCAR."""
     matches = ENERGY_RE.findall(outcar.read_text())
     if not matches:
         raise ValueError(f"No energies found in {outcar}")
@@ -54,7 +60,7 @@ def main() -> None:
                     / temperature
                     / "selected_frames"
                     / str(frame)
-                    / "relaxation"
+                    / "lobster"
                     / "OUTCAR"
                 )
                 for frame in frames
