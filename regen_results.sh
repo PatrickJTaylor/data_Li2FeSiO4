@@ -66,7 +66,7 @@ Regenerate the figures/results for the manuscript:
 Arguments:
   all                Regenerate everything (all figures + discussed-in-text results)
   figures            Regenerate all figures (main text + supplementary material, Fig. 2-S3)
-  other_results      Regenerate all discussed-in-text results (oxi_states + thermo)
+  other_results      Regenerate all discussed-in-text results (oxi_states, thermo, fe_coord etc.)
   main               Regenerate only figures from the main text (Fig. 2-7)
   supp               Regenerate only figures from the supplementary material (Fig. S1-S3)
   <result_id> ...    Regenerate a specific set of results e.g., fig_2, fig_S1 and thermo
