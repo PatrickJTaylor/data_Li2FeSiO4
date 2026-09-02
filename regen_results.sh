@@ -67,7 +67,7 @@ Arguments:
   all                Regenerate everything (all figures + discussed-in-text results)
   figures            Regenerate all figures (main text + supplementary material, Fig. 2-S3)
   other_results      Regenerate all discussed-in-text results (oxi_states + thermo)
-  main               Regenerate only figures from the main text (Fig. 2-8)
+  main               Regenerate only figures from the main text (Fig. 2-7)
   supp               Regenerate only figures from the supplementary material (Fig. S1-S3)
   <result_id> ...    Regenerate a specific set of results e.g., fig_2, fig_S1 and thermo
 
@@ -78,14 +78,17 @@ Possible values for <result_id> are:
     - fig_5         (AIMD total energy evolution)
     - fig_6         (RDFs for selected MD frames)
     - fig_7         (oxidation states for selected MD frames)
-    - fig_8         (mean Fe-O ICOBI distributions)
     - fig_S1        (Li_xFeSiO4 polymorph stability at x = 2, 0)
     - fig_S2        (convex hull and voltage curve)
-    - fig_S3        (absolute magmom distributions)
+    - fig_S3        (Fe magmom and mean Fe-O ICOBI distributions by oxidation state)
 
   Other results (discussed in the text but not directly associated with a figure):
     - oxi_states    (oxidation states at x = 2, 1, 0)
     - thermo        (thermodynamic stability of FeSiO4)
+    - fe_coord      (Fe coordination environments by oxidation state, selected MD frames)
+    - fe_fe_pairs   (short Fe-Fe distances vs coordination and oxidation state)
+    - o2_tracing    (O-O dimers and the Fe coordination of dimer-forming O atoms)
+    - dimer_o_coord (full cation coordination of the 500 K peroxide-forming O atoms)
 
 Options:
   -h, --help	Print this help message and exit
@@ -93,17 +96,19 @@ Options:
 Examples:
   $0 all
   $0 figures
-  $0 fig_8
-  $0 fig_2 fig_4 fig_S1 fig_S2
+  $0 fig_7
+  $0 fig_2 fig_3 fig_S1 fig_S2
   $0 fig_2 fig_5 oxi_states thermo
 E0F
 }
 
-RESULT_IDS=("fig_2" "fig_3" "fig_5" "fig_6" "fig_7" "fig_8" "fig_S1" "fig_S2" "fig_S3" "oxi_states" "thermo")
-FIG_IDS=("${RESULT_IDS[@]:0:9}")
-TEXT_IDS=("${RESULT_IDS[@]:9}")
-MAIN_IDS=("${FIG_IDS[@]:0:6}")
-SUPP_IDS=("${FIG_IDS[@]:6}")
+RESULT_IDS=("fig_2" "fig_3" "fig_5" "fig_6" "fig_7" "fig_S1" "fig_S2" "fig_S3" "oxi_states" "thermo" "fe_coord" "fe_fe_pairs" "o2_tracing" "dimer_o_coord")
+FIG_IDS=("${RESULT_IDS[@]:0:8}")
+TEXT_IDS=("${RESULT_IDS[@]:8}")
+MAIN_IDS=("${FIG_IDS[@]:0:5}")
+SUPP_IDS=("${FIG_IDS[@]:5}")
+# Results that depend on Wannier-assigned oxidation states for the selected MD frames
+NEEDS_MD_OX_STATES=("fig_7" "fig_S3" "fe_coord" "fe_fe_pairs" "o2_tracing" "dimer_o_coord")
 
 if [[ $# -eq 0 ]] || [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
   print_help
@@ -147,7 +152,7 @@ docker run --detach --name "${CONTAINER_ID}" result_regeneration sleep infinity 
 trap cleanup_container EXIT INT TERM
 
 for result_id in "${RESULTS[@]}"; do
-  if [[ "${result_id}" == "fig_7" ]] || [[ "${result_id}" == "fig_8" ]] || [[ "${result_id}" == "fig_S3" ]]; then
+  if contains "${result_id}" "${NEEDS_MD_OX_STATES[@]}"; then
     docker exec "${CONTAINER_ID}" python "scripts/assign_md_oxidation_states.py" &
     spinner "Assigning Wannier oxidation states for selected MD frames (prerequisite of: ${result_id})" "${!}"
 
@@ -165,6 +170,22 @@ for result_id in "${RESULTS[@]}"; do
     printf "\n"
     log 'Computing the thermodynamic stability of FeSiO4:'
     docker exec "${CONTAINER_ID}" python "scripts/thermodynamic_stability.py"
+  elif [[ "${result_id}" == "fe_coord" ]]; then
+    printf "\n"
+    log 'Analysing Fe coordination environments by oxidation state for selected MD frames:'
+    docker exec "${CONTAINER_ID}" python "scripts/fe_coordination_by_oxidation_state.py"
+  elif [[ "${result_id}" == "fe_fe_pairs" ]]; then
+    printf "\n"
+    log 'Analysing short Fe-Fe distances for selected MD frames:'
+    docker exec "${CONTAINER_ID}" python "scripts/short_fe_fe_distances.py"
+  elif [[ "${result_id}" == "o2_tracing" ]]; then
+    printf "\n"
+    log 'Tracing O-O dimer formation through selected MD frames:'
+    docker exec "${CONTAINER_ID}" python "scripts/trace_o2_forming_oxygens.py"
+  elif [[ "${result_id}" == "dimer_o_coord" ]]; then
+    printf "\n"
+    log 'Analysing the cation coordination of the 500 K peroxide-forming O atoms:'
+    docker exec "${CONTAINER_ID}" python "scripts/dimer_oxygen_coordination.py"
   else
     fig_num="${result_id:4}"
 
