@@ -18,20 +18,9 @@ def main() -> None:
     frame_sets = ((0, 6881, 16602, 39366), (0, 2581, 8315, 12276))
     window_size = 400
 
-    # Reference energy: the relaxed, unreorganised FeSiO4 supercell (650 eV, 10 k-points),
-    # against which the manuscript quotes the relaxed frame energies.
-    # TODO: archive this calculation as molecular_dynamics/unreorganised_FeSiO4_energy.npy.
-    # Until then, the relaxed 500 K frame i (a quenched local minimum ~0.12 eV above the
-    # unreorganised structure) is used as a stand-in.
-    reference_path = prefix / "unreorganised_FeSiO4_energy.npy"
-    if reference_path.exists():
-        pristine_energy = float(np.load(reference_path))
-    else:
-        pristine_energy = np.load(prefix / "500K" / "relaxed_frame_energies.npy")[0]
-        print(
-            "Warning: unreorganised FeSiO4 reference energy not found; "
-            "using the relaxed 500 K frame i as the reference."
-        )
+    # Reference energy: the relaxed 500 K frame i, i.e. the unreorganised FeSiO4
+    # supercell (all Fe tetrahedral) relaxed with the same settings as the other frames.
+    pristine_energy = np.load(prefix / "500K" / "relaxed_frame_energies.npy")[0]
 
     fig_width = 3.15
     fig_height = fig_width * 1.75
