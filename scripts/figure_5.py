@@ -18,8 +18,10 @@ def main() -> None:
     frame_sets = ((0, 6881, 16602, 39366), (0, 2581, 8315, 12276))
     window_size = 400
 
-    relaxed_frame_energies_500 = np.load(prefix / "500K" / "relaxed_frame_energies.npy")
-    pristine_energy = relaxed_frame_energies_500[0]
+    # Reference energy: the relaxed 500 K frame i, i.e. the unreorganised FeSiO4
+    # supercell (all Fe tetrahedral) relaxed and then treated identically to the other
+    # frames (see the README for the provenance of the archived energies).
+    pristine_energy = np.load(prefix / "500K" / "relaxed_frame_energies.npy")[0]
 
     fig_width = 3.15
     fig_height = fig_width * 1.75

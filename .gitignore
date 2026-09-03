@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Transient data (not cleaned up if run without Docker)
+extracted_data/molecular_dynamics/*/selected_frames/*/oxidation_states.npy

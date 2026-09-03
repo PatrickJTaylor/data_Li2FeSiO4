@@ -9,7 +9,7 @@ Authors:
 - M. Saiful Islam, ORCID: [0000-0002-8077-6241](https://orcid.org/0000-0002-8077-6241)
 - Benjamin J. Morgan, ORCID: [0000-0002-3056-8233](https://orcid.org/0000-0002-3056-8233)
 
-This is the Supporting Data for the manuscript "Multi-Step Oxygen Redox Mechanism in the Polyanionic Cathode Li<sub>2</sub>FeSiO<sub>4</sub>", DOI: [10.26434/chemrxiv.10001983/v1](https://doi.org/10.26434/chemrxiv.10001983/v1).
+This is the Supporting Data for the manuscript "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li<sub>2</sub>FeSiO<sub>4</sub>", accepted for publication in the *Journal of the American Chemical Society* (DOI to follow). Preprint: [10.26434/chemrxiv.10001983/v1](https://doi.org/10.26434/chemrxiv.10001983/v1).
 
 More precisely, this repository contains the [minimal dataset](extracted_data) and accompanying [analysis code](scripts) required to regenerate all of the results and figures[^1] in the manuscript.
 
@@ -24,6 +24,12 @@ Every figure that can be programmatically generated has an associated script, wh
 There are also several scripts that do not regenerate figures, but reproduce other results that are discussed in the text of the manuscript:
 - [assign_delithiation_oxidation_states.py](scripts/assign_delithiation_oxidation_states.py): assign Wannier oxidation states for sequentially delithiated Li<sub>$x$</sub>FeSiO<sub>4</sub> at $x = 2, 1, 0$.
 - [thermodynamic_stability.py](scripts/thermodynamic_stability.py): determine the thermodynamic stability of FeSiO<sub>4</sub>.
+- [fe_coordination_by_oxidation_state.py](scripts/fe_coordination_by_oxidation_state.py): Fe coordination environments by Wannier-assigned oxidation state, for the selected AIMD frames.
+- [short_fe_fe_distances.py](scripts/short_fe_fe_distances.py): short Fe&ndash;Fe distances cross-referenced with Fe coordination and oxidation state.
+- [trace_o2_forming_oxygens.py](scripts/trace_o2_forming_oxygens.py): O&ndash;O dimer formation and the Fe coordination of the dimer-forming O atoms.
+- [dimer_oxygen_coordination.py](scripts/dimer_oxygen_coordination.py): full cation coordination shell of the peroxide-forming O atoms in the 500 K trajectory.
+
+The contents of `extracted_data` are derived from the raw dataset (University of Bath Research Data Archive, [10.15125/BATH-01647](https://doi.org/10.15125/BATH-01647)) by the `extract.py` script included in that archive. For the selected AIMD frames, each geometry was quenched by relaxation and then a static calculation was run at the relaxed geometry (tetrahedron-method Brillouin-zone integration; any O&ndash;O dimer atoms initialised with a small negative magnetic moment); the archived energies, magnetic moments, ICOBIs and Wannier oxidation states for each frame all come from this static calculation.
 
 Whilst one could technically run the relevant scripts in any old Python environment that has access to the necessary dependencies, this repository provides several convenient methods for building bespoke and version-pinned environments for the sake of maximal reproducibility.
 
