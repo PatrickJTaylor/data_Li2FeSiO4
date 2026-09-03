@@ -29,7 +29,7 @@ There are also several scripts that do not regenerate figures, but reproduce oth
 - [trace_o2_forming_oxygens.py](scripts/trace_o2_forming_oxygens.py): O&ndash;O dimer formation and the Fe coordination of the dimer-forming O atoms.
 - [dimer_oxygen_coordination.py](scripts/dimer_oxygen_coordination.py): full cation coordination shell of the peroxide-forming O atoms in the 500 K trajectory.
 
-The relaxed AIMD frame energies in `extracted_data/molecular_dynamics/*/relaxed_frame_energies.npy` were extracted from the raw VASP output with [extract_relaxed_frame_energies.py](scripts/extract_relaxed_frame_energies.py); this script requires the raw dataset (University of Bath Research Data Archive, [10.15125/BATH-01647](https://doi.org/10.15125/BATH-01647)) and is included to document the extraction.
+The contents of `extracted_data` are derived from the raw dataset (University of Bath Research Data Archive, [10.15125/BATH-01647](https://doi.org/10.15125/BATH-01647)) by the `extract.py` script included in that archive. For the selected AIMD frames, each geometry was quenched by relaxation and then a static calculation was run at the relaxed geometry (tetrahedron-method Brillouin-zone integration; any O&ndash;O dimer atoms initialised with a small negative magnetic moment); the archived energies, magnetic moments, ICOBIs and Wannier oxidation states for each frame all come from this static calculation.
 
 Whilst one could technically run the relevant scripts in any old Python environment that has access to the necessary dependencies, this repository provides several convenient methods for building bespoke and version-pinned environments for the sake of maximal reproducibility.
 
