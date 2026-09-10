@@ -120,7 +120,7 @@ def main() -> None:
         5: r"Fe$^{\mathrm{V}}$",
     }
     fe_patches = []
-    for oxidation_state in fe_states:
+    for oxidation_state in fe_states[::-1]:
         patch = Patch(color=fe_cmap[oxidation_state], label=fe_labels[oxidation_state])
 
         fe_patches.append(patch)
@@ -133,7 +133,7 @@ def main() -> None:
         0: r"O$_{2}$",
     }
     o_patches = []
-    for oxidation_state in o_states:
+    for oxidation_state in o_states[::-1]:
         patch = Patch(color=o_cmap[oxidation_state], label=o_labels[oxidation_state])
 
         o_patches.append(patch)
