@@ -28,6 +28,7 @@ There are also several scripts that do not regenerate figures, but reproduce oth
 - [short_fe_fe_distances.py](scripts/short_fe_fe_distances.py): short Fe&ndash;Fe distances cross-referenced with Fe coordination and oxidation state.
 - [trace_o2_forming_oxygens.py](scripts/trace_o2_forming_oxygens.py): O&ndash;O dimer formation and the Fe coordination of the dimer-forming O atoms.
 - [dimer_oxygen_coordination.py](scripts/dimer_oxygen_coordination.py): full cation coordination shell of the peroxide-forming O atoms in the 500 K trajectory.
+- [fe_o_statistics_by_oxidation_state.py](scripts/fe_o_statistics_by_oxidation_state.py): mean Fe&ndash;O ICOBI and mean Fe&ndash;O bond length for each Wannier-assigned Fe oxidation state, as quoted in the Supporting Information.
 
 The contents of `extracted_data` are derived from the raw dataset (University of Bath Research Data Archive, [10.15125/BATH-01647](https://doi.org/10.15125/BATH-01647)) by the `extract.py` script included in that archive. For the selected AIMD frames, each geometry was quenched by relaxation and then a static calculation was run at the relaxed geometry (tetrahedron-method Brillouin-zone integration; any O&ndash;O dimer atoms initialised with a small negative magnetic moment); the archived energies, magnetic moments, ICOBIs and Wannier oxidation states for each frame all come from this static calculation.
 

@@ -89,6 +89,7 @@ Possible values for <result_id> are:
     - fe_fe_pairs   (short Fe-Fe distances vs coordination and oxidation state)
     - o2_tracing    (O-O dimers and the Fe coordination of dimer-forming O atoms)
     - dimer_o_coord (full cation coordination of the 500 K peroxide-forming O atoms)
+    - fe_o_stats    (mean Fe-O ICOBI and bond length by oxidation state; quoted in the SI)
 
 Options:
   -h, --help	Print this help message and exit
@@ -102,13 +103,13 @@ Examples:
 E0F
 }
 
-RESULT_IDS=("fig_2" "fig_3" "fig_5" "fig_6" "fig_7" "fig_S1" "fig_S2" "fig_S3" "oxi_states" "thermo" "fe_coord" "fe_fe_pairs" "o2_tracing" "dimer_o_coord")
+RESULT_IDS=("fig_2" "fig_3" "fig_5" "fig_6" "fig_7" "fig_S1" "fig_S2" "fig_S3" "oxi_states" "thermo" "fe_coord" "fe_fe_pairs" "o2_tracing" "dimer_o_coord" "fe_o_stats")
 FIG_IDS=("${RESULT_IDS[@]:0:8}")
 TEXT_IDS=("${RESULT_IDS[@]:8}")
 MAIN_IDS=("${FIG_IDS[@]:0:5}")
 SUPP_IDS=("${FIG_IDS[@]:5}")
 # Results that depend on Wannier-assigned oxidation states for the selected MD frames
-NEEDS_MD_OX_STATES=("fig_7" "fig_S3" "fe_coord" "fe_fe_pairs" "o2_tracing" "dimer_o_coord")
+NEEDS_MD_OX_STATES=("fig_7" "fig_S3" "fe_coord" "fe_fe_pairs" "o2_tracing" "dimer_o_coord" "fe_o_stats")
 
 if [[ $# -eq 0 ]] || [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
   print_help
@@ -186,6 +187,10 @@ for result_id in "${RESULTS[@]}"; do
     printf "\n"
     log 'Analysing the cation coordination of the 500 K peroxide-forming O atoms:'
     docker exec "${CONTAINER_ID}" python "scripts/dimer_oxygen_coordination.py"
+  elif [[ "${result_id}" == "fe_o_stats" ]]; then
+    printf "\n"
+    log 'Computing mean Fe-O ICOBI and bond length by oxidation state:'
+    docker exec "${CONTAINER_ID}" python "scripts/fe_o_statistics_by_oxidation_state.py"
   else
     fig_num="${result_id:4}"
 
