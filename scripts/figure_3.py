@@ -54,9 +54,9 @@ def main() -> None:
             np.repeat(x, len(si_o_icobis)), si_o_icobis, color=COLOURS["azure_blue"]
         )
 
-    axes["magmoms"].plot(
-        xs, average_magmoms, "o--", color=COLOURS["grape_soda"], markeredgecolor="black"
-    )
+    # The two Fe are symmetry-equivalent, so the mean coincides exactly with both
+    # scatter points; no black edge is used here, unlike the averages in panel (b).
+    axes["magmoms"].plot(xs, average_magmoms, "o--", color=COLOURS["grape_soda"])
     axes["icobis"].plot(
         xs,
         average_fe_o_icobis,
