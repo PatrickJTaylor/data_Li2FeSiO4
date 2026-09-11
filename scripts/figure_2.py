@@ -85,9 +85,6 @@ def main() -> None:
         ax.set_yticks([])
         ax.set_ylabel("DOS")
 
-        for direction in ("left", "top", "right"):
-            ax.spines[direction].set_visible(False)
-
     axes["FeSiO4"].set_xlabel(r"$E - E_{\mathrm{F}}$ / eV")
 
     axes["Li2FeSiO4"].annotate(
