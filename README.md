@@ -9,19 +9,19 @@ Authors:
 - M. Saiful Islam, ORCID: [0000-0002-8077-6241](https://orcid.org/0000-0002-8077-6241)
 - Benjamin J. Morgan, ORCID: [0000-0002-3056-8233](https://orcid.org/0000-0002-3056-8233)
 
-This is the Supporting Data for the manuscript "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li<sub>2</sub>FeSiO<sub>4</sub>", accepted for publication in the *Journal of the American Chemical Society* (DOI to follow). Preprint: [10.26434/chemrxiv.10001983/v2](https://doi.org/10.26434/chemrxiv.10001983/v2).
+This is the Supporting Data for the article "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li<sub>2</sub>FeSiO<sub>4</sub>", published in the *Journal of the American Chemical Society*: [10.1021/jacs.6c02850](https://doi.org/10.1021/jacs.6c02850). Preprint: [10.26434/chemrxiv.10001983/v2](https://doi.org/10.26434/chemrxiv.10001983/v2).
 
-More precisely, this repository contains the [minimal dataset](extracted_data) and accompanying [analysis code](scripts) required to regenerate all of the results and figures[^1] in the manuscript.
+This repository contains the [minimal dataset](extracted_data) and accompanying [analysis code](scripts) required to regenerate all of the results and figures[^1] in the article.
 
 [^1]: Note that figures 1 and 4 were not generated programmatically, so they cannot be reproduced in an automated manner.
 That being said, the raw data used to produce these figures are present in the dataset included in this archive.
-The geometry of Li<sub>2</sub>FeSiO<sub>4</sub> required to plot figure 1, as well as the `xsf` files necessary to plot the Wannier isosurfaces of Figure 4 can all be found in [extracted_data/sequential_delithiation](data_Li2FeSiO4/tree/main/extracted_data/sequential_delithiation).
+The geometry of Li<sub>2</sub>FeSiO<sub>4</sub> required to plot figure 1, as well as the `xsf` files necessary to plot the Wannier isosurfaces of Figure 4 can all be found in [extracted_data/sequential_delithiation](extracted_data/sequential_delithiation).
 
 ## Usage 📝
 
-Practically speaking, to reproduce any one result or figure in the manuscript, all that is required is to run the relevant [Python script](scripts).
+Practically speaking, to reproduce any one result or figure in the article, all that is required is to run the relevant [Python script](scripts).
 Every figure that can be programmatically generated has an associated script, which when run will deposit the regenerated pdf in [figures/regenerated](figures/regenerated).
-There are also several scripts that do not regenerate figures, but reproduce other results that are discussed in the text of the manuscript:
+There are also several scripts that do not regenerate figures, but reproduce other results that are discussed in the text of the article:
 - [assign_delithiation_oxidation_states.py](scripts/assign_delithiation_oxidation_states.py): assign Wannier oxidation states for sequentially delithiated Li<sub>$x$</sub>FeSiO<sub>4</sub> at $x = 2, 1, 0$.
 - [thermodynamic_stability.py](scripts/thermodynamic_stability.py): determine the thermodynamic stability of FeSiO<sub>4</sub>.
 - [fe_coordination_by_oxidation_state.py](scripts/fe_coordination_by_oxidation_state.py): Fe coordination environments by Wannier-assigned oxidation state, for the selected AIMD frames.
@@ -30,7 +30,7 @@ There are also several scripts that do not regenerate figures, but reproduce oth
 - [dimer_oxygen_coordination.py](scripts/dimer_oxygen_coordination.py): full cation coordination shell of the peroxide-forming O atoms in the 500 K trajectory.
 - [fe_o_statistics_by_oxidation_state.py](scripts/fe_o_statistics_by_oxidation_state.py): mean Fe&ndash;O ICOBI and mean Fe&ndash;O bond length for each Wannier-assigned Fe oxidation state, as quoted in the Supporting Information.
 
-The contents of `extracted_data` are derived from the raw dataset (University of Bath Research Data Archive, [10.15125/BATH-01647](https://doi.org/10.15125/BATH-01647)) by the `extract.py` script included in that archive. For the selected AIMD frames, each geometry was quenched by relaxation and then a static calculation was run at the relaxed geometry (tetrahedron-method Brillouin-zone integration; any O&ndash;O dimer atoms initialised with a small negative magnetic moment); the archived energies, magnetic moments, ICOBIs and Wannier oxidation states for each frame all come from this static calculation.
+The contents of `extracted_data` are derived from the raw dataset (University of Bath Research Data Archive, [10.15125/BATH-01647](https://doi.org/10.15125/BATH-01647)) by the `extract.py` script included in that archive. For the selected AIMD frames, each geometry was quenched by relaxation and then a static calculation was run at the relaxed geometry (tetrahedron-method Brillouin-zone integration; any O&ndash;O dimer atoms initialised with a small negative magnetic moment); the archived energies, magnetic moments, ICOBIs and Wannier oxidation states for each frame all come from this static calculation. For frame 12276 of the 1000 K trajectory, the static calculation was restarted from an existing wavefunction and converges to the same magnetic state as the relaxation; started from scratch, it converges to a metastable magnetic state 0.90 eV higher in energy.
 
 Whilst one could technically run the relevant scripts in any old Python environment that has access to the necessary dependencies, this repository provides several convenient methods for building bespoke and version-pinned environments for the sake of maximal reproducibility.
 

@@ -1,0 +1,70 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite the article below."
+type: dataset
+title: 'Supporting Data for "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li2FeSiO4"'
+abstract: >-
+  Minimal dataset and analysis code required to regenerate the figures and results
+  of the article "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich
+  Cathode Li2FeSiO4", published in the Journal of the American Chemical Society.
+  The full raw dataset is archived at the University of Bath Research Data Archive.
+authors:
+  - family-names: Taylor
+    given-names: Patrick J.
+    orcid: "https://orcid.org/0009-0003-6511-6442"
+    affiliation: University of Bath
+  - family-names: McColl
+    given-names: Kit
+    orcid: "https://orcid.org/0000-0002-7794-8276"
+    affiliation: University of Oxford
+  - family-names: Islam
+    given-names: M. Saiful
+    orcid: "https://orcid.org/0000-0002-8077-6241"
+    affiliation: University of Oxford
+  - family-names: Morgan
+    given-names: Benjamin J.
+    orcid: "https://orcid.org/0000-0002-3056-8233"
+    affiliation: University of Bath
+repository-code: "https://github.com/PatrickJTaylor/data_Li2FeSiO4"
+license:
+  - GPL-3.0-or-later
+  - CC-BY-4.0
+keywords:
+  - lithium-rich cathodes
+  - polyanionic cathodes
+  - oxygen redox
+  - density functional theory
+  - molecular dynamics
+references:
+  - type: data
+    title: 'Dataset for "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li2FeSiO4"'
+    authors:
+      - family-names: Taylor
+        given-names: Patrick J.
+      - family-names: McColl
+        given-names: Kit
+      - family-names: Islam
+        given-names: M. Saiful
+      - family-names: Morgan
+        given-names: Benjamin J.
+    doi: 10.15125/BATH-01647
+    publisher:
+      name: University of Bath Research Data Archive
+preferred-citation:
+  type: article
+  title: "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li2FeSiO4"
+  authors:
+    - family-names: Taylor
+      given-names: Patrick J.
+      orcid: "https://orcid.org/0009-0003-6511-6442"
+    - family-names: McColl
+      given-names: Kit
+      orcid: "https://orcid.org/0000-0002-7794-8276"
+    - family-names: Islam
+      given-names: M. Saiful
+      orcid: "https://orcid.org/0000-0002-8077-6241"
+    - family-names: Morgan
+      given-names: Benjamin J.
+      orcid: "https://orcid.org/0000-0002-3056-8233"
+  journal: Journal of the American Chemical Society
+  doi: 10.1021/jacs.6c02850
+  year: 2026
