@@ -2,6 +2,7 @@
 
 [![License: GPL v3](https://img.shields.io/badge/license-GPLv3-blue)](https://www.gnu.org/licenses/gpl-3.0)
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22919537.svg)](https://doi.org/10.5281/zenodo.22919537)
 
 Authors:
 - Patrick J. Taylor, ORCID: [0009-0003-6511-6442](https://orcid.org/0009-0003-6511-6442)
@@ -12,6 +13,7 @@ Authors:
 This is the Supporting Data for the article "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li<sub>2</sub>FeSiO<sub>4</sub>", published in the *Journal of the American Chemical Society*: [10.1021/jacs.6c02850](https://doi.org/10.1021/jacs.6c02850). Preprint: [10.26434/chemrxiv.10001983/v2](https://doi.org/10.26434/chemrxiv.10001983/v2).
 
 This repository contains the [minimal dataset](extracted_data) and accompanying [analysis code](scripts) required to regenerate all of the results and figures[^1] in the article.
+Each release of this repository is archived on Zenodo: [10.5281/zenodo.22919537](https://doi.org/10.5281/zenodo.22919537).
 
 [^1]: Note that figures 1 and 4 were not generated programmatically, so they cannot be reproduced in an automated manner.
 That being said, the raw data used to produce these figures are present in the dataset included in this archive.
