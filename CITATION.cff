@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this data or code, please cite the article below."
 type: dataset
-title: 'Supporting Data for "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li2FeSiO4"'
+title: 'Analysis code and extracted data for "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li2FeSiO4"'
 abstract: >-
   Minimal dataset and analysis code required to regenerate the figures and results
   of the article "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich
