@@ -25,9 +25,7 @@ authors:
     orcid: "https://orcid.org/0000-0002-3056-8233"
     affiliation: University of Bath
 repository-code: "https://github.com/PatrickJTaylor/data_Li2FeSiO4"
-license:
-  - GPL-3.0-or-later
-  - CC-BY-4.0
+license: CC-BY-4.0
 keywords:
   - lithium-rich cathodes
   - polyanionic cathodes
