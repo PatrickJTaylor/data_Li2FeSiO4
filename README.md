@@ -10,7 +10,7 @@ Authors:
 - M. Saiful Islam, ORCID: [0000-0002-8077-6241](https://orcid.org/0000-0002-8077-6241)
 - Benjamin J. Morgan, ORCID: [0000-0002-3056-8233](https://orcid.org/0000-0002-3056-8233)
 
-This is the Supporting Data for the article "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li<sub>2</sub>FeSiO<sub>4</sub>", published in the *Journal of the American Chemical Society*: [10.1021/jacs.6c02850](https://doi.org/10.1021/jacs.6c02850). Preprint: [10.26434/chemrxiv.10001983/v2](https://doi.org/10.26434/chemrxiv.10001983/v2).
+This is the Supporting Data for the article "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li<sub>2</sub>FeSiO<sub>4</sub>", published in the *Journal of the American Chemical Society*: [10.1021/jacs.6c02850](https://doi.org/10.1021/jacs.6c02850). Preprint: [10.26434/chemrxiv.10001983/v3](https://doi.org/10.26434/chemrxiv.10001983/v3).
 
 This repository contains the [minimal dataset](extracted_data) and accompanying [analysis code](scripts) required to regenerate all of the results and figures[^1] in the article.
 Each release of this repository is archived on Zenodo: [10.5281/zenodo.22919537](https://doi.org/10.5281/zenodo.22919537).
