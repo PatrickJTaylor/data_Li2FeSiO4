@@ -1,14 +1,28 @@
 # Supporting Data for "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li<sub>2</sub>FeSiO<sub>4</sub>"
 
-[![License: GPL v3](https://img.shields.io/badge/license-GPLv3-blue)](https://www.gnu.org/licenses/gpl-3.0)
-[![License: CC BY 4.0](https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22919537.svg)](https://doi.org/10.5281/zenodo.22919537)
+[![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-e57940)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: CC-BY-4.0](https://img.shields.io/badge/license-CC--BY--4.0-5c9a08)](https://creativecommons.org/licenses/by/4.0/)
 
-Authors:
-- Patrick J. Taylor, ORCID: [0009-0003-6511-6442](https://orcid.org/0009-0003-6511-6442)
-- Kit McColl, ORCID: [0000-0002-7794-8276](https://orcid.org/0000-0002-7794-8276)
-- M. Saiful Islam, ORCID: [0000-0002-8077-6241](https://orcid.org/0000-0002-8077-6241)
-- Benjamin J. Morgan, ORCID: [0000-0002-3056-8233](https://orcid.org/0000-0002-3056-8233)
+---
+
+<p align="center">
+<a href="https://doi.org/10.26434/chemrxiv.10001983/v3">
+<img src="https://img.shields.io/badge/ChemRxiv-10.26434%2Fchemrxiv.10001983%2Fv3-304979">
+</a>
+<a href="https://doi.org/10.1021/jacs.6c02850">
+<img src="https://img.shields.io/badge/JACS-jacs.6c02850-ffce34">
+</a>
+<br><br>
+<a href="https://orcid.org/0009-0003-6511-6442">Patrick J. Taylor</a>&ast;,
+<a href="https://orcid.org/0000-0002-7794-8276">Kit McColl</a>,
+<a href="https://orcid.org/0000-0002-8077-6241">M. Saiful Islam</a> and
+<a href="https://orcid.org/0000-0002-3056-8233">Benjamin J. Morgan</a>&ast;
+<br>
+&ast;<a href="">patrick.joseph.taylor@gmail.com</a>/<a href="">b.j.morgan@bath.ac.uk</a>
+</p>
+
+---
 
 This is the Supporting Data for the article "Multi-Step Oxygen Redox Mechanism in the Polyanionic Lithium-Rich Cathode Li<sub>2</sub>FeSiO<sub>4</sub>", published in the *Journal of the American Chemical Society*: [10.1021/jacs.6c02850](https://doi.org/10.1021/jacs.6c02850). Preprint: [10.26434/chemrxiv.10001983/v3](https://doi.org/10.26434/chemrxiv.10001983/v3).
 
