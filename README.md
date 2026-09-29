@@ -9,16 +9,12 @@
 <p align="center">
   <a href="https://doi.org/10.26434/chemrxiv.10001983/v3"><img src="https://img.shields.io/badge/ChemRxiv-10.26434%2Fchemrxiv.10001983%2Fv3-304979" alt="ChemRxiv DOI"></a>&nbsp;
   <a href="https://doi.org/10.1021/jacs.6c02850"><img src="https://img.shields.io/badge/JACS-10.1021%2Fjacs.6c02850-ffce34" alt="JACS DOI"></a>
-
   <br><br>
-
   <a href="https://orcid.org/0009-0003-6511-6442">Patrick J. Taylor</a>&ast;,
   <a href="https://orcid.org/0000-0002-7794-8276">Kit McColl</a>,
   <a href="https://orcid.org/0000-0002-8077-6241">M. Saiful Islam</a> and
   <a href="https://orcid.org/0000-0002-3056-8233">Benjamin J. Morgan</a>&ast;
-
   <br>
-
   &ast;<a href="mailto:patrick.joseph.taylor@gmail.com">patrick.joseph.taylor@gmail.com</a> /
   <a href="mailto:b.j.morgan@bath.ac.uk">b.j.morgan@bath.ac.uk</a>
 </p>
