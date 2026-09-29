@@ -19,7 +19,7 @@
 <a href="https://orcid.org/0000-0002-8077-6241">M. Saiful Islam</a> and
 <a href="https://orcid.org/0000-0002-3056-8233">Benjamin J. Morgan</a>&ast;
 <br>
-&ast;<a href="">patrick.joseph.taylor@gmail.com</a>/<a href="">b.j.morgan@bath.ac.uk</a>
+&ast;<a href="mailto:patrick.joseph.taylor@gmail.com">patrick.joseph.taylor@gmail.com</a>/<a href="mailto:b.j.morgan@bath.ac.uk">b.j.morgan@bath.ac.uk</a>
 </p>
 
 ---
