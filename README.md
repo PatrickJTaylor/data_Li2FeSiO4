@@ -11,7 +11,7 @@
 <img src="https://img.shields.io/badge/ChemRxiv-10.26434%2Fchemrxiv.10001983%2Fv3-304979">
 </a>
 <a href="https://doi.org/10.1021/jacs.6c02850">
-<img src="https://img.shields.io/badge/JACS-jacs.6c02850-ffce34">
+<img src="https://img.shields.io/badge/JACS-10.1021%2Fjacs.6c02850-ffce34">
 </a>
 <br><br>
 <a href="https://orcid.org/0009-0003-6511-6442">Patrick J. Taylor</a>&ast;,
