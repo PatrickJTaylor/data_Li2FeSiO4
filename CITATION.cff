@@ -64,5 +64,9 @@ preferred-citation:
       given-names: Benjamin J.
       orcid: "https://orcid.org/0000-0002-3056-8233"
   journal: Journal of the American Chemical Society
+  volume: 148
+  issue: 40
+  start: 42928
+  end: 42938
   doi: 10.1021/jacs.6c02850
   year: 2026
